@@ -1,0 +1,64 @@
+.add {
+  position: absolute;
+  background-color: black;
+  width: 50%;
+  height: 30%;
+  z-index: 1;
+  border-radius: 10px;
+  transform: translatex(-100%);
+  opacity: 1;
+  transition: 1s;
+}
+.addClass {
+  position: absolute;
+  z-index: 1;
+  opacity: 1;
+  transition: 3s;
+  transform: translateX(1%);
+}
+.add .addTaka {
+  width: 100%;
+  display: flex;
+  transition: 3s;
+}
+.add .addTaka .a {
+  position: relative;
+  width: 50%;
+  height: 20px;
+  text-decoration: none;
+  z-index: 10;
+}
+.add .addTaka .a .text {
+  margin-top: 5px;
+  width: 100%;
+  font-weight: bold;
+  border: 1px solid #00dfc4;
+  background-color: #fed6e3;
+  color: black;
+  border-radius: 5px;
+  font-size: 0.75rem;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.add .arrow {
+  width: 20px;
+  color: black;
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  text-align: center;
+  transform: rotate(180deg);
+  transition: 5s;
+  z-index: 10;
+}
+.add .arrow i {
+  border-radius: 10px;
+  font-size: 20px;
+  box-shadow: 2px 2px 10px 2px #a9c9ff;
+}
+.arrowRotate {
+  transition: 2s;
+  transform: rotate(180deg);
+}

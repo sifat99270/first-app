@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 600px) {
+  body {
+    background-color: #23242a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  .main {
+    width: 380px;
+    height: 300px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1c1c1c;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .main::before {
+    content: "";
+    width: 380px;
+    height: 300px;
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    background: linear-gradient(
+      0deg,
+      transparent,
+      transparent,
+      #45f3ff,
+      #45f3ff,
+      #45f3ff
+    );
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+  }
+  .main::after {
+    content: "";
+    width: 380px;
+    height: 300px;
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    background: linear-gradient(
+      0deg,
+      transparent,
+      transparent,
+      #ff45d7,
+      #45f3ff,
+      #45f3ff
+    );
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+  }
+  @keyframes animate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  .main .round {
+    position: absolute;
+    inset: 4px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 30px;
+    background-color: #222;
+    border-radius: 8px;
+    z-index: 2;
+  }
+  .main .round div {
+    position: relative;
+    width: 300px;
+    margin-bottom: 30px;
+  }
+  .main .round div input {
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    outline: none;
+    border: none;
+    color: #222;
+    background-color: transparent;
+    z-index: 10;
+  }
+  .main .round div span {
+    position: absolute;
+    left: 5px;
+    padding: 10px;
+    letter-spacing: 0.05em;
+    font-size: 1em;
+    transition: 0.5s;
+    color: #8f8f8f;
+    pointer-events: none;
+  }
+  .main .round div input:valid ~ span,
+  .main .round div input:focus ~ span {
+    color: #fff;
+    font-size: 0.75em;
+    transform: translateY(-34px);
+  }
+  .main .round div i {
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    background-color: #fff;
+    left: 0;
+    bottom: 0;
+    transition: 0.5s;
+  }
+  .main .round div input:valid ~ i,
+  .main .round div input:focus ~ i {
+    height: 44px;
+  }
+  .main button {
+    background-color: rgba(255, 0, 64, 0.151);
+    position: absolute;
+    z-index: 15;
+    width: 150px;
+    height: 30px;
+    bottom: 100px;
+    border-radius: 10px;
+    font-weight: bold;
+  }
+}

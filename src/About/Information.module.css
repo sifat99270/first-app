@@ -1,0 +1,127 @@
+.container {
+  width: 100vw;
+  height: 35vw;
+  position: relative;
+  margin-bottom: 150px;
+}
+
+.h1 {
+  text-align: center;
+  background-image: linear-gradient(
+    to top,
+    #fcc5e4 0%,
+    #fda34b 15%,
+    #ff7882 35%,
+    #c8699e 52%,
+    #7046aa 71%,
+    #0c1db8 87%,
+    #020f75 100%
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: slideRight 0.5s ease forwards;
+}
+@keyframes slideRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.h3 {
+  margin-top: 10px;
+  text-align: center;
+  background-image: linear-gradient(
+    to right,
+    #eea2a2 0%,
+    #bbc1bf 19%,
+    #57c6e1 42%,
+    #b49fda 79%,
+    #7ac5d8 100%
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: slideLeft 0.5s ease forwards;
+}
+
+h2 {
+  margin: 10px 0 20px 0;
+  text-align: center;
+  background-image: linear-gradient(to top, #cc208e 0%, #6713d2 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: slideLeft 0.5s ease forwards;
+  animation-delay: 0.2s;
+}
+@keyframes slideLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.teamMain {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+}
+.teamMain .team:nth-child(odd) {
+  animation: slideTop 1s ease forwards;
+}
+.teamMain .team:nth-child(even) {
+  animation: slideBottom 1s ease forwards;
+}
+@keyframes slideTop {
+  0% {
+    opacity: 0;
+    transform: translatey(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translatey(0px);
+  }
+}
+@keyframes slideBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateZ(0px);
+  }
+}
+.teamMain .team {
+  background-color: #fff;
+  width: 30%;
+  height: 70%;
+  margin-left: 2vw;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 10;
+  box-shadow: 5px 5px 20px 20px aliceblue;
+}
+.teamMain .team img {
+  border-radius: 10px;
+  width: 80%;
+  height: 80%;
+  background-position: bottom;
+  object-fit: cover;
+}
+.container .teamMain .team span {
+  margin-top: 5px;
+}
+.container .teamMain .team h6 {
+  color: aqua;
+}

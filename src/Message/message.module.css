@@ -1,0 +1,274 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary: #171c2a;
+  --secondary: #11141f;
+  --tertiary: #1f222e;
+  --dark: #0e0e12;
+  --green: #52d794;
+  --blue: #00b3bd;
+  --light: #fff;
+  --red: indianred;
+}
+.main {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--tertiary);
+  display: flex;
+  position: relative;
+}
+.main .addUser {
+  width: 50%;
+  position: fixed;
+  top: 40%;
+  left: 25%;
+  background-color: var(--dark);
+  z-index: 1;
+  text-align: center;
+  color: var(--light);
+  border: 1px solid var(--green);
+  border-radius: 5px;
+  transform: scale(0);
+  transition: 1s;
+}
+.main .addUser p {
+  margin-top: 5px;
+}
+.main .addUser .addInput {
+  width: 80%;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  height: 30px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  padding: 10px;
+  font-size: 1rem;
+}
+.main .addUser .showUser {
+  width: 80%;
+  margin: auto;
+  border-radius: 5px;
+  background-color: var(--primary);
+  box-shadow: 2px 2px 5px 1px var(--green);
+  top: 100%;
+  left: 10%;
+  position: absolute;
+}
+.main .addUser .showUser .user {
+  display: flex;
+  height: 40px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 0 10px;
+}
+.main .addUser .showUser .user .img {
+  width: 30px;
+  height: 30px;
+  margin-top: 5px;
+  border-radius: 50%;
+}
+.main .addUser .showUser .user p {
+  margin-left: 10px;
+}
+.main .converSation {
+  width: 25%;
+  background-color: var(--dark);
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.main .converSation .input {
+  width: 95%;
+  height: 25px;
+  margin: 10px 0 10px 0;
+  background-color: var(--primary);
+  outline: none;
+  border: none;
+  color: var(--light);
+  border-radius: 5px;
+}
+.main .converSation .input::placeholder {
+  padding: 10px;
+}
+.main .converSation .indivisualCon {
+  width: 100%;
+  height: 50px;
+  color: var(--light);
+  display: flex;
+  position: relative;
+  margin-bottom: 5px;
+}
+.main .converSation .indivisualCon img {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-left: 2px;
+}
+.main .converSation .indivisualCon span {
+  font-size: 0.6rem;
+  margin: 5px 0 0 5px;
+}
+.main .converSation .indivisualCon i {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary);
+  bottom: -4px;
+}
+.add {
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  left: 10px;
+  bottom: 10px;
+  font-size: 25px;
+  background-color: var(--light);
+  border-radius: 50%;
+  text-align: center;
+}
+.add .addIcon i {
+  color: var(--dark);
+}
+.main .messageAll {
+  left: 25%;
+  width: 75%;
+  height: 95.8%;
+  position: absolute;
+  background-color: var(--tertiary);
+  overflow-y: auto;
+}
+.main .messageAll .partyName {
+  width: 98%;
+  height: 30px;
+  background-color: var(--primary);
+  margin: 5px 0 5px 0;
+  border-radius: 5px;
+  line-height: 30px;
+  padding: 0px 10px;
+  color: var(--light);
+  position: relative;
+}
+.main .messageAll .partyName .delete {
+  position: absolute;
+  right: 10px;
+}
+.main .messageAll .message {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+.main .messageAll .message .creator {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  min-height: 30px;
+  position: relative;
+  margin: 10px 0 10px auto;
+  margin-bottom: 20px;
+}
+.main .messageAll .message .creator .messageOne {
+  max-width: 80%;
+  background-color: var(--green);
+  padding: 5px;
+  border-radius: 5px;
+  text-align: right;
+  font-size: 0.8rem;
+}
+.main .messageAll .message .creator .date {
+  position: absolute;
+  right: 10px;
+  bottom: -25px;
+  font-size: 0.65rem;
+  color: #0e0e12;
+  padding: 2px;
+  background-color: var(--light);
+  box-shadow: 1px 1px 4px 1px aliceblue;
+  border-radius: 5px;
+}
+.main .messageAll .message .other {
+  width: 50%;
+  min-height: 30px;
+  text-align: left;
+  display: flex;
+  position: relative;
+  margin-left: 2px;
+  margin-bottom: 20px;
+}
+.main .messageAll .message .other .messageOne {
+  max-width: 80%;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  margin-left: 4px;
+  margin-top: 10px;
+  background-color: var(--blue);
+  padding: 5px;
+  text-align: center;
+  font-size: 0.8rem;
+}
+.main .messageAll .message .other .date {
+  position: absolute;
+  left: 15%;
+  bottom: -20px;
+  font-size: 0.65rem;
+  color: #0e0e12;
+  padding: 2px;
+  background-color: var(--light);
+  box-shadow: 1px 1px 4px 1px aliceblue;
+  border-radius: 5px;
+}
+.main .messageAll .message .other .img {
+  width: 30px;
+  max-width: 100%;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.main .write {
+  position: fixed;
+  bottom: 0px;
+  left: 25%;
+  width: 75%;
+  height: 50px;
+  display: flex;
+  background-color: var(--tertiary);
+  border-radius: 10px;
+}
+.main .write input {
+  width: 90%;
+  height: 40px;
+  margin-top: 5px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  padding: 10px;
+  color: var(--light);
+  font-size: 1.1rem;
+  background-color: var(--dark);
+}
+.main .write input::placeholder {
+  font-size: 1.2rem;
+}
+.main .write .sendButton {
+  position: absolute;
+  right: 0px;
+  width: 30px;
+}
+.main .write i {
+  margin-left: 2px;
+  line-height: 50px;
+  font-size: 1.5rem;
+  color: #00b3bd;
+}
+.main .scale {
+  z-index: 1;
+  transform: scale(1);
+}

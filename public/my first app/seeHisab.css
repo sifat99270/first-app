@@ -1,0 +1,84 @@
+* {
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+body {
+}
+.allMain {
+  width: 100vw;
+  height: auto;
+}
+.navMain {
+  width: 100vw;
+  background-color: aliceblue;
+  display: flex;
+}
+.navMain .all {
+  width: 25vw;
+  height: 30px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  line-height: 30px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
+  color: blueviolet;
+  text-decoration: none;
+  border-radius: 10px;
+  box-shadow: 5px 5px 20px 5px #ffbbec;
+  background-color: transparent;
+  z-index: 10;
+}
+.navMain .all:active {
+  border: 1px solid blue;
+}
+.seeMain {
+  width: 100%;
+  background-color: aliceblue;
+  display: flex;
+  text-align: center;
+  line-height: 25px;
+  font-size: 10px;
+  font-weight: bold;
+  z-index: 2;
+  margin-top: 10px;
+}
+.seeMain .left {
+  width: 45%;
+  height: 25px;
+  border-radius: 8px;
+  color: magenta;
+  background-color: transparent;
+
+  box-shadow: 5px 5px 10px 2px #d9afd9;
+  z-index: 10;
+}
+.seeMain .right {
+  width: 25%;
+  color: deepskyblue;
+  border-radius: 10px;
+  height: 25px;
+  background-color: white;
+  z-index: 7;
+  box-shadow: 5px 5px 10px 2px #6284ff;
+}
+.seeMain .delete {
+  width: 15%;
+  background-color: aqua;
+  border-radius: 10px;
+  height: 25px;
+  background-color: transparent;
+  z-index: 10;
+  color: darkviolet;
+  box-shadow: 5px 5px 10px 2px #d9afd9;
+}
+.seeMain .update {
+  width: 15%;
+  border-radius: 10px;
+  height: 25px;
+  background-color: white;
+  box-shadow: 5px 5px 10px 2px #6284ff;
+  color: aqua;
+  z-index: 7;
+}

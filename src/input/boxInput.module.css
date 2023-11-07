@@ -1,0 +1,32 @@
+.input {
+  width: 40vw;
+  position: relative;
+  margin-top: 20px;
+  box-shadow: 5px 5px 10px 5px #a9c9ff;
+  border-radius: 10px;
+}
+.input input {
+  position: relative;
+  width: 40vw;
+  height: 35px;
+  outline: none;
+  border: none;
+  font-size: 0.9rem;
+  border-radius: 10px;
+  padding: 10px;
+  font-weight: bold;
+  z-index: 10;
+}
+.input .try {
+  width: 20px;
+  height: 20px;
+  color: black;
+  z-index: 12;
+  position: absolute;
+  top: 8px;
+  right: 1px;
+  text-align: center;
+}
+.input .try i {
+  position: relative;
+}

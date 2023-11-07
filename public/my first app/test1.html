@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    div {
+      display: flex;
+      color: white;
+      width: 100%;
+      height: 500px;
+      background-color: black;
+      position: relative;
+    }
+    .span {
+      opacity: 0;
+      position: relative;
+      width: 15px;
+      font-weight: bold;
+      height: 20px;
+      display: flex;
+      display: inline-block;
+      transition: 1s;
+      transform: translateY(50px);
+    }
+    .spanOpa {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  </style>
+  <body>
+    <div class="div">I AM SIFAT</div>
+  </body>
+  <script>
+    let a = document.querySelector(".div");
+    let spliteText = a.innerText.split("");
+    a.innerHTML = spliteText
+      .map((item) => {
+        return `<div class='span'>${item}</div>`;
+      })
+      .join("");
+    let ac = 0;
+    let interVal = setInterval(ab, 50);
+    function ab() {
+      let ba = document.querySelectorAll(".span");
+      let c = document.querySelectorAll(".span")[ac];
+      if (ac === spliteText.length) {
+        console.log("clear");
+        clearInterval(interVal);
+      } else {
+        c.classList.add("spanOpa");
+        ac++;
+      }
+    }
+    function compleate() {
+      clearInterval(interVal);
+      ac = 0;
+    }
+  </script>
+</html>

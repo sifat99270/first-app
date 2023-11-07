@@ -1,0 +1,28 @@
+.loadingMain {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loadingMain span {
+  width: 10px;
+  height: 10px;
+  background-color: aqua;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: rotate(calc(var(--i) * 360deg / 15)) translateY(35px);
+  animation: rotate 1.5s linear infinite;
+  animation-delay: calc(var(--i) * 0.1s);
+  opacity: 0;
+}
+@keyframes rotate {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

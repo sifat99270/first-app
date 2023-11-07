@@ -1,0 +1,41 @@
+.fixed {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  z-index: 1;
+}
+.mainLogout {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: aliceblue;
+  border-radius: 10px;
+  z-index: 100;
+}
+.mainLogout .logOutIcon {
+  display: flex;
+  padding: 5px;
+  box-shadow: 5px 5px 10px 10px #a9c9ff;
+  z-index: 10;
+  color: magenta;
+  font-weight: bold;
+  border-radius: 10px;
+}
+.displayName {
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  display: flex;
+  background-color: aliceblue;
+  padding: 6px;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px 10px #ffbbec;
+  color: aqua;
+  z-index: 10;
+}
+.displayName .name {
+  margin-left: 5px;
+}

@@ -1,0 +1,150 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.main {
+  width: 100%;
+  background-color: aliceblue;
+  display: flex;
+  text-align: center;
+  line-height: 40px;
+  font-size: 0.9rem;
+  font-weight: bolder;
+  padding: 0px 5px;
+  z-index: -1;
+  margin-top: 5px;
+}
+.main .left {
+  width: 45%;
+  height: 40px;
+  border-radius: 8px;
+  color: magenta;
+  background-color: transparent;
+  pointer-events: none;
+  box-shadow: 5px 5px 10px 2px #d9afd9;
+  z-index: 10;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2px;
+}
+.main .left .span1 {
+  border-left: 2px solid aqua;
+  border-radius: 10px;
+}
+.main .left .span2 {
+  color: blue;
+  border-left: 2px solid pink;
+  border-radius: 10px;
+  font-size: 0.5rem;
+}
+.main .right {
+  width: 25%;
+  color: deepskyblue;
+  border-radius: 10px;
+  height: 40px;
+  background-color: white;
+  z-index: 7;
+  box-shadow: 5px 5px 10px 2px #6284ff;
+}
+.main .updateMain {
+  position: relative;
+  width: 30%;
+}
+.main .updateMain .flex {
+  width: 100%;
+  display: flex;
+}
+.main .delete {
+  width: 50%;
+  background-color: aqua;
+  border-radius: 10px;
+  height: 35px;
+  line-height: 35px;
+  background-color: transparent;
+  z-index: 10;
+  font-size: 0.6rem;
+  text-align: center;
+  color: darkviolet;
+  box-shadow: 5px 5px 10px 2px #d9afd9;
+}
+.main .updateMain .update {
+  width: 50%;
+  border-radius: 10px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  font-size: 0.6rem;
+  background-color: white;
+  box-shadow: 5px 5px 10px 2px #6284ff;
+  color: aqua;
+  z-index: 7;
+}
+.main .updateMain .updateForm {
+  position: static;
+  height: 150px;
+  max-height: 0px;
+  overflow: hidden;
+  z-index: 1;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px 2px #6284ff;
+  transition: 1s;
+}
+.main .updateMain .updateForm .input1 {
+  position: relative;
+  width: 95%;
+  margin-top: 10px;
+  margin-left: 2.5%;
+}
+.main .updateMain .updateForm .updateInput {
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  height: 30px;
+  outline: none;
+  border: 1px solid black;
+  color: black;
+  z-index: 10;
+  transition: 0.5s;
+}
+.main .updateMain .updateForm .top {
+  width: auto;
+  height: 13px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  line-height: 13px;
+  position: absolute;
+  left: 10px;
+  bottom: 12px;
+  pointer-events: none;
+  transition: 0.5s;
+}
+.main .updateMain .updateForm button {
+  margin: 5px 0 5px 20%;
+  width: 60%;
+  height: 20px;
+  border-radius: 5px;
+  border: 1px solid black;
+  font-weight: bold;
+  background-color: magenta;
+}
+.main .updateMain form .updateInput:valid ~ .top,
+.main .updateMain form .updateInput:focus ~ .top {
+  background-color: white;
+  font-size: 0.6rem;
+  transform: translateY(-15px);
+  color: aqua;
+}
+.main .updateMain form .updateInput:focus {
+  border: 1px solid magenta;
+}
+.main .updateMain .king {
+  position: static;
+  max-height: 300px;
+}

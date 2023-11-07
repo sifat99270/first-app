@@ -1,0 +1,28 @@
+.dayMain {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px 0px magenta;
+  border: 2px solid aqua;
+  padding: 0px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.dayMain .dateSeen {
+  position: relative;
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 10px;
+  border-left: 2px solid blue;
+  border-right: 2px solid #da70d6;
+  color: #00bfff;
+  margin-bottom: 5px;
+  z-index: 20;
+  box-shadow: 2px 2px 10px 3px #d9afd9;
+}

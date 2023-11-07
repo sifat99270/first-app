@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <link href="./HisabAdd/seeHisab/hisabModel.css" rel="stylesheet" />
+  <body>
+    <div class="main">
+      <div class="left">HISABAR NAM</div>
+      <div class="right">TAKA</div>
+      <div class="updateMain">
+        <div class="flex">
+          <div class="delete">DELETE</div>
+          <div class="update">UPDATE</div>
+        </div>
+        <form class="updateForm">
+          <div class="input1">
+            <input type="text" required class="updateInput" />
+            <div class="top">NAME</div>
+          </div>
+          <div class="input1">
+            <input type="number" required class="updateInput" />
+            <div class="top">TAKA</div>
+          </div>
+          <button type="submit">SUBMIT</button>
+        </form>
+      </div>
+    </div>
+    <div class="main">
+      <div class="left">HISABAR NAM</div>
+      <div class="right">TAKA</div>
+      <div class="updateMain">
+        <div class="flex">
+          <div class="delete">DELETE</div>
+          <div class="update">UPDATE</div>
+        </div>
+        <form class="updateForm">
+          <div class="input1">
+            <input type="text" required class="updateInput" />
+            <div class="top">NAME</div>
+          </div>
+          <div class="input1">
+            <input type="number" required class="updateInput" />
+            <div class="top">TAKA</div>
+          </div>
+          <button type="submit">SUBMIT</button>
+        </form>
+      </div>
+    </div>
+  </body>
+  <script>
+    const a = document.querySelectorAll(".updateForm");
+    let b = document.querySelectorAll(".update");
+    function king() {
+      a.forEach((item) => {
+        item.classList.remove("king");
+        //let b = item.classList.contains("king");
+        //console.log(b);
+        this.parentElement.nextElementSibling.classList.add("king");
+      });
+    }
+    b.forEach((item) => {
+      item.addEventListener("click", king);
+    });
+  </script>
+</html>

@@ -1,0 +1,41 @@
+.AuthButtonMain {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 1;
+}
+.AuthButtonMain .MainAuthButton {
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  display: flex;
+  background-color: aliceblue;
+  padding: 6px;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px 10px #ffbbec;
+  color: aqua;
+  z-index: 1;
+}
+.AuthButtonMain .MainAuthButton .ButtonLogin {
+  text-decoration: none;
+  margin-left: 5px;
+}
+.AuthButtonMain .MainSignin {
+  position: absolute;
+  right: 0px;
+  bottom: 10px;
+  display: flex;
+  background-color: aliceblue;
+  padding: 6px;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px 10px #ffbbec;
+  color: aqua;
+  z-index: 1;
+}
+.AuthButtonMain .MainSignin .ButtonSignin {
+  text-decoration: none;
+  margin-left: 5px;
+}

@@ -1,0 +1,103 @@
+.servicePage {
+  margin-top: 50px;
+  background-color: #000;
+  color: wheat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px 5px #ffbbec;
+}
+.servicePage h3 {
+  color: wheat;
+  font-weight: bold;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.servicePage .serviceFlex {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.servicePage .serviceFlex .skw {
+  margin-right: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  position: relative;
+  background-color: #1c1c1c;
+  width: 200px;
+  border-radius: 5px;
+}
+.servicePage .serviceFlex .skw .service {
+  position: relative;
+  background-color: #1c1c1c;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px 3px aqua;
+}
+.servicePage .serviceFlex .skw .service .icon {
+  margin-top: 20px;
+  width: 40%;
+  height: 35%;
+  background: #2e2e2e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--clr);
+  box-shadow:
+    0 0 0 4px #2e2e2e,
+    0 0 0 6px var(--clr);
+  text-align: center;
+  font-size: 1.5em;
+  transition: 0.5s ease-in-out;
+}
+.servicePage .serviceFlex .skw:hover .service .icon {
+  background-color: var(--clr);
+  color: #2e2e2e;
+  box-shadow:
+    0 0 0 4px #2e2e2e,
+    0 0 0 300px var(--clr);
+}
+.servicePage .serviceFlex .skw .service h4 {
+  color: aqua;
+  font-weight: bold;
+  margin-top: 10px;
+}
+.servicePage .serviceFlex .skw:hover .service h4 {
+  color: blue;
+}
+.servicePage .serviceFlex .skw .service .write {
+  max-height: 0px;
+  text-align: center;
+  font-weight: bold;
+  overflow: hidden;
+  transition: 1s;
+}
+.servicePage .serviceFlex .skw:hover .service .write {
+  max-height: 200px;
+  color: #000;
+}
+.servicePage .serviceFlex .skw::before {
+  content: "";
+  position: absolute;
+  inset: -15px 20px;
+  z-index: 1;
+  border-top: 4px solid var(--clr);
+  border-bottom: 4px solid var(--clr);
+  transition: 0.5s;
+  transform: skewY(15deg);
+}
+.servicePage .serviceFlex .skw:hover::before {
+  inset: -5px 2px;
+  transform: skewY(0deg);
+}
