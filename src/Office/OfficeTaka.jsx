@@ -78,7 +78,16 @@ export default function OfficeTaka() {
           );
         })
       ) : (
-        <div>NO DATA FOUND</div>
+        <div
+          style={{
+            fontWeight: 1000,
+            width: "100%",
+            textAlign: "center",
+            color: "red",
+          }}
+        >
+          NO DATA FOUND
+        </div>
       )}
     </>
   );

@@ -23,7 +23,7 @@ export default function Login() {
       if (get.email) {
         navigate("/", { puse: true });
       } else {
-        console.log(get);
+        setError(get);
       }
     } catch (err) {
       setLoading(false);
@@ -66,7 +66,7 @@ export default function Login() {
         <h4>Dont Have Any Account?</h4>
         <NavLink to="/signIn">SignIn</NavLink>
       </div>
-      {error && <div>{error}</div>}
+      {error && <div className={classes.seeErr}>{error}</div>}
     </>
   );
 }

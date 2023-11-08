@@ -12,8 +12,8 @@ node_modules
 dist
 dist-ssr
 *.local
-.env.local
-
+*.env.local
+*.eslintrc.json
 # Editor directories and files
 chat-application/
 .vscode/*

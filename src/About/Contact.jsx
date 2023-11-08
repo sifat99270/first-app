@@ -8,7 +8,7 @@ export default function Contact() {
       <div className={classes.contact}>
         <a href="mailto:rasifat33@gmail.com" className={classes.a}>
           <div className={classes.contactIcon}>
-            <i className="fa-brands fa-square-whatsapp"></i>
+            <i className="fa-solid fa-envelope"></i>
           </div>
           <span>WHATSAPP </span>
         </a>

@@ -39,3 +39,9 @@
   text-decoration: none;
   color: hotpink;
 }
+.seeErr {
+  width: 100%;
+  font-weight: 1000;
+  color: red;
+  text-align: center;
+}

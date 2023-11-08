@@ -13,67 +13,25 @@ const socket = io.connect("http://localhost:5000");
 // eslint-disable-next-line react/prop-types
 export function AuthproviderServer({ children }) {
   const [currentUser, setCurrentUser] = useState(null);
-  const [mounthData, setMounthData] = useState([]);
-  const [dayData, setDayData] = useState([]);
   const [loading, setLoading] = useState(false);
   useEffect(() => {
+    setLoading(true);
     const know = localStorage.getItem("user");
     if (know) {
       const localStorge = JSON.parse(localStorage.getItem("user"));
       const decode = decodeToken(localStorge);
       if (decode.id && decode.email) {
+        setLoading(false);
         setCurrentUser(decode);
       } else {
+        setLoading(false);
         setCurrentUser(null);
       }
     } else {
+      setLoading(false);
       setCurrentUser(null);
     }
   }, []);
-  useEffect(() => {
-    async function callDay() {
-      if (currentUser) {
-        const day = await fetch(
-          `${import.meta.env.VITE_SERVER_URL}/takaAddAndGet/day/${
-            currentUser.id
-          }`,
-          {
-            method: "GET",
-          }
-        );
-        const setDay = await day.json();
-        setDayData(setDay);
-      } else {
-        setDayData([]);
-      }
-    }
-    callDay();
-  }, [currentUser]);
-  useEffect(() => {
-    async function autoCall() {
-      if (currentUser) {
-        setLoading(true);
-        await fetch(
-          `${import.meta.env.VITE_SERVER_URL}/takaAddAndGet/mounth/${
-            currentUser.id
-          }`,
-          {
-            method: "GET",
-          }
-        )
-          .then((res) => {
-            return res.json();
-          })
-          .then((data) => {
-            setMounthData(data);
-            setLoading(false);
-          });
-      } else {
-        setMounthData([]);
-      }
-    }
-    autoCall();
-  }, [currentUser]);
 
   async function SignIn(formData) {
     let result;
@@ -136,8 +94,6 @@ export function AuthproviderServer({ children }) {
     SignIn,
     Login,
     loading,
-    mounthData,
-    dayData,
     Logout,
     socket,
   };

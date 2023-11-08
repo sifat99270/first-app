@@ -39,3 +39,29 @@
   text-decoration: none;
   color: hotpink;
 }
+.err {
+  width: 40vw;
+  min-height: 30px;
+  text-align: center;
+  border-radius: 5px;
+  position: relative;
+  border: 1px solid red;
+  color: black;
+  outline: none;
+  margin-top: 5px;
+  display: none;
+}
+.errClass {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form1 .red {
+  border: 1px solid red;
+}
+.seeErr {
+  width: 100%;
+  font-weight: 1000;
+  color: red;
+  text-align: center;
+}
