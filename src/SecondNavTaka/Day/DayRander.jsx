@@ -1,7 +1,7 @@
-import Loading from "../../Loading/loading";
+import { useEffect, useState } from "react";
 import { useAuthServer } from "../../auth/myServerAuthContext";
 import Day from "./Day";
-import { useEffect, useState } from "react";
+import Loading from "/src/Loading/Loading";
 // eslint-disable-next-line react/prop-types
 export default function DayRander() {
   const { currentUser, loading } = useAuthServer();
