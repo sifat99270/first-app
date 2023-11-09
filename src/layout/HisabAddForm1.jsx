@@ -60,7 +60,6 @@ export default function HisabAddForm1({ takaAdd }) {
           .then(async (data) => {
             setName("");
             setTaka("");
-            console.log(data);
             await socket.emit("add", data);
           });
       }

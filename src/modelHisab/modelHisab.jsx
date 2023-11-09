@@ -55,7 +55,6 @@ export default function ModelHisab({
             }
           );
           const upateResult = await update.json();
-          console.log(upateResult);
           if (upateResult.message) {
             socket.emit("dayUpdate", {
               name: inputName,
@@ -81,7 +80,6 @@ export default function ModelHisab({
             }
           );
           const upateResult = await update.json();
-          console.log(upateResult);
           if (upateResult.message) {
             socket.emit("officeUpdate", {
               name: inputName,
@@ -115,7 +113,6 @@ export default function ModelHisab({
             }
           );
           const deletesResult = await deletes.json();
-          console.log(deletesResult);
           if (deletesResult.message) {
             socket.emit("officeDelete", { index });
           }
@@ -133,7 +130,6 @@ export default function ModelHisab({
             }
           );
           const deletesResult = await deletes.json();
-          console.log(deletesResult);
           if (deletesResult.message) {
             socket.emit("dayDelete", { index });
           }

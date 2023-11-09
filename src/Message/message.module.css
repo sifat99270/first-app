@@ -139,7 +139,7 @@
 .main .messageAll {
   left: 25%;
   width: 75%;
-  height: 95.8%;
+  height: calc(100vh-50px);
   position: absolute;
   background-color: var(--tertiary);
   overflow-y: auto;

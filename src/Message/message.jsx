@@ -67,7 +67,6 @@ export default function Message() {
     }
   }, [currentUser]);
   function addConversation(item) {
-    console.log(currentUser.id + item._id);
     fetch(`${import.meta.env.VITE_SERVER_URL}/converSation`, {
       method: "POST",
       body: JSON.stringify({
@@ -89,8 +88,8 @@ export default function Message() {
       .then((res) => {
         return res.json();
       })
-      .then((data) => {
-        console.log(data);
+      .then(() => {
+        //console.log(data);
       });
   }
   function seeMessage(all) {
@@ -110,7 +109,6 @@ export default function Message() {
       })
       .then((data) => {
         if (data.message) {
-          console.log(data.message);
           setMessages([]);
         } else {
           setMessages(data);
@@ -168,7 +166,6 @@ export default function Message() {
         />
         <div className={classes.showUser}>
           {search.map((item) => {
-            console.log(item);
             return (
               <div
                 onClick={() => {
