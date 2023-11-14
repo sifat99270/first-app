@@ -8,7 +8,7 @@ export default function Login() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(null);
-  const { Login } = useAuthServer();
+  const { Login, socket } = useAuthServer();
   const navigate = useNavigate();
 
   async function handleSubmit(e) {
@@ -21,6 +21,7 @@ export default function Login() {
       const get = await Login(email, password);
       setLoading(false);
       if (get.email) {
+        socket.emit("tost", "login successfull");
         navigate("/", { puse: true });
       } else {
         setError(get);

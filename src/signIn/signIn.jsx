@@ -13,7 +13,7 @@ export default function SignIn() {
   const [loading, setLoading] = useState(null);
   const [error, setError] = useState(null);
   const formRef = useRef();
-  const { SignIn } = useAuthServer();
+  const { SignIn, socket } = useAuthServer();
   const navigate = useNavigate();
   let emailRef = useRef();
   useEffect(() => {}, []);
@@ -39,6 +39,7 @@ export default function SignIn() {
           setLoading(true);
           const siginResult = await SignIn(formData);
           if (siginResult.id && siginResult.email) {
+            socket.emit("tost", "signin successfull");
             setError("");
             setLoading(false);
             navigate("/", { puse: true });
@@ -76,7 +77,7 @@ export default function SignIn() {
   return (
     <>
       <form
-        action="http://localhost:5000/user"
+        action="https://chathisab.onrender.com/user/signin"
         method="post"
         encType="multipart/form-data"
         ref={formRef}

@@ -9,7 +9,7 @@ const AuthContext = React.createContext();
 export function useAuthServer() {
   return useContext(AuthContext);
 }
-const socket = io.connect("http://localhost:5000");
+const socket = io.connect(import.meta.env.VITE_SERVER_URL);
 // eslint-disable-next-line react/prop-types
 export function AuthproviderServer({ children }) {
   const [currentUser, setCurrentUser] = useState(null);
@@ -35,10 +35,13 @@ export function AuthproviderServer({ children }) {
 
   async function SignIn(formData) {
     let result;
-    const SighInDetails = await fetch(`http://localhost:5000/user/signin`, {
-      method: "POST",
-      body: formData,
-    });
+    const SighInDetails = await fetch(
+      `${import.meta.env.VITE_SERVER_URL}/user/signin`,
+      {
+        method: "POST",
+        body: formData,
+      }
+    );
     const data = await SighInDetails.json();
     if (data.token) {
       localStorage.setItem("user", JSON.stringify(data.token));
@@ -52,16 +55,19 @@ export function AuthproviderServer({ children }) {
   }
   async function Login(email, password) {
     let result;
-    const response = await fetch("http://localhost:5000/user/login", {
-      headers: {
-        "content-type": "application/json",
-      },
-      method: "POST",
-      body: JSON.stringify({
-        email: email,
-        password: password,
-      }),
-    });
+    const response = await fetch(
+      `${import.meta.env.VITE_SERVER_URL}/user/login"`,
+      {
+        headers: {
+          "content-type": "application/json",
+        },
+        method: "POST",
+        body: JSON.stringify({
+          email: email,
+          password: password,
+        }),
+      }
+    );
     const data = await response.json();
     if (data.loginObj && data.token) {
       localStorage.setItem("user", JSON.stringify(data.token));
@@ -82,13 +88,6 @@ export function AuthproviderServer({ children }) {
     }
   }
 
-  //function test(message,boole,time){
-  //if(boole){
-  //  return true;
-  // }else{
-  //    return false;
-  //  }
-  // }
   const value = {
     currentUser,
     SignIn,

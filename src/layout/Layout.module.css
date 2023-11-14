@@ -1,3 +1,24 @@
 .transition {
   transition: 1s;
 }
+.tost {
+  position: absolute;
+  width: 200px;
+  height: 40px;
+  background-color: hotpink;
+  z-index: 10;
+  border-radius: 5px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #fff;
+  text-transform: uppercase;
+  transition: 1s;
+  right: 0;
+  display: none;
+  transform: translateX(200px);
+}
+.tostAdd {
+  display: block;
+  transform: translateX(0px);
+}

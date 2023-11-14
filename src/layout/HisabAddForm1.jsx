@@ -7,6 +7,7 @@ export default function HisabAddForm1({ takaAdd }) {
   const [name, setName] = useState("");
   const [taka, setTaka] = useState("");
   const { currentUser, socket } = useAuthServer();
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     if (currentUser) {
@@ -19,7 +20,7 @@ export default function HisabAddForm1({ takaAdd }) {
     const date = all.toLocaleDateString();
     const time = all.toLocaleTimeString();
     e.preventDefault();
-
+    setLoading(true);
     const body = {
       id: currentUser.id,
       mounth: mounth,
@@ -43,10 +44,12 @@ export default function HisabAddForm1({ takaAdd }) {
           .then(async (data) => {
             setName("");
             setTaka("");
+            setLoading(false);
             // eslint-disable-next-line react/prop-types
             await socket.emit("addOffice", data);
           });
       } else {
+        setLoading(true);
         fetch(`${import.meta.env.VITE_SERVER_URL}/takaAddAndGet`, {
           method: "POST",
           body: JSON.stringify(body),
@@ -58,12 +61,14 @@ export default function HisabAddForm1({ takaAdd }) {
             return res.json();
           })
           .then(async (data) => {
+            setLoading(false);
             setName("");
             setTaka("");
             await socket.emit("add", data);
           });
       }
     } catch (err) {
+      setLoading(false);
       alert("there was a problem");
     }
   }
@@ -96,7 +101,9 @@ export default function HisabAddForm1({ takaAdd }) {
           />
           <div>TAKA</div>
         </div>
-        <button type="submit">{takaAdd ? "TAKA ADD" : "KHORAJ ADD"}</button>
+        <button disabled={loading} type="submit">
+          {takaAdd ? "TAKA ADD" : "KHORAJ ADD"}
+        </button>
         <button type="reset" onClick={Reset}>
           RESET
         </button>
