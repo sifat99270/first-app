@@ -1,7 +1,18 @@
 .transition {
   transition: 1s;
 }
-.tost {
+.over{
+  position: absolute;
+  width: 500px;
+  height: 40px;
+  background-color: transparent;
+  overflow: hidden;
+  z-index: 100;
+  right: 0;
+  pointer-events: none;
+
+}
+.over .tost {
   position: absolute;
   width: 200px;
   height: 40px;
@@ -13,12 +24,13 @@
   font-size: 1.1rem;
   color: #fff;
   text-transform: uppercase;
-  transition: 1s;
+  transition: 3s;
   right: 0;
-  display: none;
-  transform: translateX(200px);
+  transform: translateX(100%);
 }
-.tostAdd {
-  display: block;
-  transform: translateX(0px);
+
+.over .tostAdd {
+  transition: 3s;
+  transform: translateX(-1%);
 }
+

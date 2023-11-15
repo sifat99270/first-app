@@ -4,7 +4,7 @@ export default function Information() {
     <>
       <div className={classes.container}>
         <h1 className={classes.h1}>ABOUT US</h1>
-        <h3 className={classes.h3}>THAINK A NAME</h3>
+        <h3 className={classes.h3}>ABDUL KADER CONSTRUCTION</h3>
         <h2>OUR TEAM</h2>
         <div className={classes.teamMain}>
           <div className={classes.team}>

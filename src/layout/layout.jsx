@@ -21,7 +21,7 @@ export default function Layout({ children }) {
     socket.on("getTost", (data) => {
       setTost(data);
       callTost();
-      setTimeout(deleteTost, 3000);
+      setTimeout(deleteTost, 4000);
     });
   }, [socket]);
 
@@ -35,9 +35,12 @@ export default function Layout({ children }) {
   });
   return (
     <>
-      <div ref={tostRef} className={classes.tost}>
-        {tost}
-      </div>
+       <div className={classes.over}>
+         <div ref={tostRef} className={classes.tost}>
+           {tost}
+         </div>
+       </div>
+
       <Nav />
       {currentUser && <HisabAddNew active={setActive} />}
       <div ref={transitionRef} className={classes.transition}>
